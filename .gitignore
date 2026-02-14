@@ -1,0 +1,146 @@
+# ========================
+# Python / Backend
+# ========================
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+.eggs/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Environments / secrets
+.env
+.env.*
+*.env
+!.env.example
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# mypy / type checkers
+.mypy_cache/
+.pytype/
+.pyre/
+
+# Profiling
+*.prof
+
+# ========================
+# Node.js / Frontend
+# ========================
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Next.js
+.next/
+out/
+
+# Build output
+build/
+dist/
+
+# Testing
+coverage/
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Vercel
+.vercel
+
+# ========================
+# Docker
+# ========================
+docker-compose.override.yml
+
+# ========================
+# Neo4j
+# ========================
+neo4j_data/
+plugins/
+
+# ========================
+# Redis
+# ========================
+dump.rdb
+
+# ========================
+# IDEs & Editors
+# ========================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ========================
+# OS Files
+# ========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# Misc
+# ========================
+*.pem
+*.key
+*.cert
+*.log
+*.pid
+*.seed
+*.bak
+*.tmp
+*.temp

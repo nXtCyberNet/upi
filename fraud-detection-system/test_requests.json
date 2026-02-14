@@ -1,0 +1,1602 @@
+[
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000001",
+    "timestamp": "2026-02-13T09:15:32.441Z",
+    "amount": 2499.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90001",
+      "upi_id": "priya.sharma@paytm",
+      "device": { "device_id": "DEV-A1001", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.142.18" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90002", "upi_id": "rajesh.kumar@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000002",
+    "timestamp": "2026-02-13T09:15:45.102Z",
+    "amount": 150.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80001",
+      "upi_id": "amit.verma@okicici",
+      "device": { "device_id": "DEV-B2001", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.89.201.44" },
+      "geo": { "lat": 28.6139, "lon": 77.2090 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-DL-5001", "upi_id": "chaiwala.central@axl", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000003",
+    "timestamp": "2026-02-13T09:16:01.887Z",
+    "amount": 45000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70001",
+      "upi_id": "deepak.reddy@oksbi",
+      "device": { "device_id": "DEV-C3001", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "49.43.88.201" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KA-70002", "upi_id": "sneha.patil@ibl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000004",
+    "timestamp": "2026-02-13T09:16:18.330Z",
+    "amount": 899.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60001",
+      "upi_id": "kavitha.sundar@gpay",
+      "device": { "device_id": "DEV-D4001", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "49.37.55.129" },
+      "geo": { "lat": 13.0827, "lon": 80.2707 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TN-6001", "upi_id": "saravana.stores@paytm", "receiver_type": "MERCHANT", "mcc_code": "5411" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000005",
+    "timestamp": "2026-02-13T09:16:33.715Z",
+    "amount": 75000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90003",
+      "upi_id": "suresh.mule01@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0330, "lon": 72.8410 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90004", "upi_id": "rakesh.mule02@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000006",
+    "timestamp": "2026-02-13T09:16:40.102Z",
+    "amount": 75000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0350, "lon": 72.8430 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-GJ-50001", "upi_id": "ankit.mule03@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000007",
+    "timestamp": "2026-02-13T09:16:48.900Z",
+    "amount": 74800.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50001",
+      "upi_id": "ankit.mule03@axl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90003", "upi_id": "suresh.mule01@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000008",
+    "timestamp": "2026-02-13T09:17:02.441Z",
+    "amount": 320.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-WB-40001",
+      "upi_id": "arpita.das@phonepe",
+      "device": { "device_id": "DEV-E5001", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.33.12.88" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-WB-4001", "upi_id": "bigbasket.kol@ybl", "receiver_type": "MERCHANT", "mcc_code": "5411" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000009",
+    "timestamp": "2026-02-13T09:17:15.780Z",
+    "amount": 5500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-RJ-30001",
+      "upi_id": "mohit.agarwal@okhdfc",
+      "device": { "device_id": "DEV-F6001", "device_os": "iOS 16", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.92.110.33" },
+      "geo": { "lat": 26.9124, "lon": 75.7873 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "USR-RJ-30002", "upi_id": "pooja.mehta@kotak", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000010",
+    "timestamp": "2026-02-13T09:17:28.112Z",
+    "amount": 12000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TS-20001",
+      "upi_id": "naveen.rao@oksbi",
+      "device": { "device_id": "DEV-G7001", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "49.44.190.77" },
+      "geo": { "lat": 17.3850, "lon": 78.4867 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "BILL-TS-2001", "upi_id": "tsspdcl.bill@ybl", "receiver_type": "BILLER", "mcc_code": "4900" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000011",
+    "timestamp": "2026-02-13T09:17:44.550Z",
+    "amount": 199.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90005",
+      "upi_id": "swati.joshi@gpay",
+      "device": { "device_id": "DEV-H8001", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.88.44.120" },
+      "geo": { "lat": 18.5204, "lon": 73.8567 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-MH-9001", "upi_id": "swiggy.pune@icici", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000012",
+    "timestamp": "2026-02-13T03:22:01.900Z",
+    "amount": 95000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DORMANT-001",
+      "upi_id": "old.account99@ybl",
+      "device": { "device_id": "DEV-NEW-X01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "8.8.4.100" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90006", "upi_id": "ravi.collector@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000013",
+    "timestamp": "2026-02-13T09:18:05.330Z",
+    "amount": 1200.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70003",
+      "upi_id": "meera.krishna@phonepe",
+      "device": { "device_id": "DEV-I9001", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.40.22.180" },
+      "geo": { "lat": 12.2958, "lon": 76.6394 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-KA-7001", "upi_id": "dmart.mysore@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5311" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000014",
+    "timestamp": "2026-02-13T09:18:22.660Z",
+    "amount": 750.00,
+    "currency": "INR",
+    "txn_type": "COLLECT",
+    "sender": {
+      "sender_id": "USR-DL-80002",
+      "upi_id": "rohit.singh@okaxis",
+      "device": { "device_id": "DEV-J1002", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.91.77.205" },
+      "geo": { "lat": 28.5355, "lon": 77.3910 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-DL-80003", "upi_id": "neha.gupta@gpay", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000015",
+    "timestamp": "2026-02-13T09:18:38.901Z",
+    "amount": 49999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90003",
+      "upi_id": "suresh.mule01@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0330, "lon": 72.8410 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KA-70004", "upi_id": "dummy.holder@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000016",
+    "timestamp": "2026-02-13T09:18:55.220Z",
+    "amount": 4200.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KL-10001",
+      "upi_id": "arun.nair@federalbank",
+      "device": { "device_id": "DEV-K2002", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.35.68.91" },
+      "geo": { "lat": 9.9312, "lon": 76.2673 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KL-10002", "upi_id": "lakshmi.menon@okicici", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000017",
+    "timestamp": "2026-02-13T09:19:10.445Z",
+    "amount": 85.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60002",
+      "upi_id": "muthu.vel@ibl",
+      "device": { "device_id": "DEV-L3002", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "49.45.100.22" },
+      "geo": { "lat": 11.0168, "lon": 76.9558 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TN-6002", "upi_id": "tea.kadai.cbe@paytm", "receiver_type": "MERCHANT", "mcc_code": "5814" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000018",
+    "timestamp": "2026-02-13T09:19:25.678Z",
+    "amount": 15000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MP-11001",
+      "upi_id": "vikram.thakur@oksbi",
+      "device": { "device_id": "DEV-M4002", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.93.44.156" },
+      "geo": { "lat": 23.2599, "lon": 77.4126 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MP-11002", "upi_id": "anjali.soni@kotak", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000019",
+    "timestamp": "2026-02-13T09:19:40.110Z",
+    "amount": 550.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50002",
+      "upi_id": "harsh.patel@gpay",
+      "device": { "device_id": "DEV-N5002", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.90.210.45" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-GJ-5001", "upi_id": "zomato.ahmd@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000020",
+    "timestamp": "2026-02-13T09:19:55.332Z",
+    "amount": 25000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80001",
+      "upi_id": "amit.verma@okicici",
+      "device": { "device_id": "DEV-B2001", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "8.8.2.55" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KA-70005", "upi_id": "unknown.recv@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000021",
+    "timestamp": "2026-02-13T09:20:08.771Z",
+    "amount": 3100.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-UP-12001",
+      "upi_id": "sakshi.yadav@phonepe",
+      "device": { "device_id": "DEV-O6002", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.38.77.140" },
+      "geo": { "lat": 26.8467, "lon": 80.9462 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-UP-1201", "upi_id": "flipkart.lko@axl", "receiver_type": "MERCHANT", "mcc_code": "5399" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000022",
+    "timestamp": "2026-02-13T09:20:22.113Z",
+    "amount": 10000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0345, "lon": 72.8425 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-RJ-30003", "upi_id": "fast.cashout@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000023",
+    "timestamp": "2026-02-13T09:20:35.442Z",
+    "amount": 10000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0348, "lon": 72.8428 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-RJ-30004", "upi_id": "temp.holder2@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000024",
+    "timestamp": "2026-02-13T09:20:48.883Z",
+    "amount": 10000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0352, "lon": 72.8432 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-GJ-50003", "upi_id": "temp.holder3@ibl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000025",
+    "timestamp": "2026-02-13T09:21:02.110Z",
+    "amount": 440.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-HR-13001",
+      "upi_id": "neeraj.malik@gpay",
+      "device": { "device_id": "DEV-P7002", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.200.15" },
+      "geo": { "lat": 28.4595, "lon": 77.0266 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-HR-1301", "upi_id": "dominos.ggn@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000026",
+    "timestamp": "2026-02-13T09:21:18.445Z",
+    "amount": 6800.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70006",
+      "upi_id": "divya.shetty@okaxis",
+      "device": { "device_id": "DEV-Q8002", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.89.155.32" },
+      "geo": { "lat": 12.9141, "lon": 74.8560 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "USR-KA-70007", "upi_id": "prakash.gowda@oksbi", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000027",
+    "timestamp": "2026-02-13T09:21:33.880Z",
+    "amount": 2000.00,
+    "currency": "INR",
+    "txn_type": "MANDATE",
+    "sender": {
+      "sender_id": "USR-TN-60003",
+      "upi_id": "vignesh.rajan@ibl",
+      "device": { "device_id": "DEV-R9002", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "49.42.11.88" },
+      "geo": { "lat": 13.0827, "lon": 80.2707 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "BILL-TN-6003", "upi_id": "netflix.india@hdfcbank", "receiver_type": "BILLER", "mcc_code": "4899" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000028",
+    "timestamp": "2026-02-13T09:21:48.115Z",
+    "amount": 250.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-WB-40002",
+      "upi_id": "suman.bose@phonepe",
+      "device": { "device_id": "DEV-S1003", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.34.88.201" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-WB-4002", "upi_id": "uber.kolkata@icici", "receiver_type": "MERCHANT", "mcc_code": "4121" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000029",
+    "timestamp": "2026-02-13T09:22:01.332Z",
+    "amount": 88000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DORMANT-002",
+      "upi_id": "dead.acct55@oksbi",
+      "device": { "device_id": "DEV-NEW-X02", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "3.108.22.90" },
+      "geo": { "lat": 28.7041, "lon": 77.1025 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-DL-80004", "upi_id": "quick.drain@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000030",
+    "timestamp": "2026-02-13T09:22:15.780Z",
+    "amount": 1599.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90007",
+      "upi_id": "aditi.kulkarni@gpay",
+      "device": { "device_id": "DEV-T2003", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.88.190.77" },
+      "geo": { "lat": 18.5204, "lon": 73.8567 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-MH-9002", "upi_id": "amazon.pay@axl", "receiver_type": "MERCHANT", "mcc_code": "5399" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000031",
+    "timestamp": "2026-02-13T09:22:30.110Z",
+    "amount": 30000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-SIM-SWAP-01",
+      "upi_id": "victim.user1@paytm",
+      "device": { "device_id": "DEV-SWAP-01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.88.44" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-MH-90008", "upi_id": "cash.out.now@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000032",
+    "timestamp": "2026-02-13T09:22:33.445Z",
+    "amount": 30000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-SIM-SWAP-02",
+      "upi_id": "victim.user2@okicici",
+      "device": { "device_id": "DEV-SWAP-01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.88.44" },
+      "geo": { "lat": 19.0762, "lon": 72.8779 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-MH-90008", "upi_id": "cash.out.now@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000033",
+    "timestamp": "2026-02-13T09:22:36.110Z",
+    "amount": 30000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-SIM-SWAP-03",
+      "upi_id": "victim.user3@oksbi",
+      "device": { "device_id": "DEV-SWAP-01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.88.44" },
+      "geo": { "lat": 19.0763, "lon": 72.8780 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-MH-90008", "upi_id": "cash.out.now@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000034",
+    "timestamp": "2026-02-13T09:22:50.880Z",
+    "amount": 475.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-OR-14001",
+      "upi_id": "subash.mohanty@phonepe",
+      "device": { "device_id": "DEV-U3003", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.41.130.22" },
+      "geo": { "lat": 20.2961, "lon": 85.8245 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-OR-1401", "upi_id": "rapido.bbsr@ybl", "receiver_type": "MERCHANT", "mcc_code": "4121" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000035",
+    "timestamp": "2026-02-13T09:23:05.112Z",
+    "amount": 8500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-PB-15001",
+      "upi_id": "gurpreet.singh@okaxis",
+      "device": { "device_id": "DEV-V4003", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.89.35.181" },
+      "geo": { "lat": 30.7333, "lon": 76.7794 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-PB-15002", "upi_id": "manjit.kaur@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000036",
+    "timestamp": "2026-02-13T09:23:20.332Z",
+    "amount": 120.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-AS-16001",
+      "upi_id": "bhaskar.das@gpay",
+      "device": { "device_id": "DEV-W5003", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "2.9.5", "capability_mask": "011001" },
+      "network": { "ip_address": "49.39.44.12" },
+      "geo": { "lat": 26.1445, "lon": 91.7362 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-AS-1601", "upi_id": "petrol.pump.gwhy@oksbi", "receiver_type": "MERCHANT", "mcc_code": "5541" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000037",
+    "timestamp": "2026-02-13T09:23:35.665Z",
+    "amount": 22000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90009",
+      "upi_id": "rahul.deshmukh@kotak",
+      "device": { "device_id": "DEV-X6003", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.94.201.55" },
+      "geo": { "lat": 19.8762, "lon": 75.3433 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90010", "upi_id": "santosh.jadhav@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000038",
+    "timestamp": "2026-02-13T09:23:50.990Z",
+    "amount": 699.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80005",
+      "upi_id": "ananya.kapoor@phonepe",
+      "device": { "device_id": "DEV-Y7003", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.91.12.145" },
+      "geo": { "lat": 28.6304, "lon": 77.2177 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-DL-5002", "upi_id": "myntra.shop@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5699" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000039",
+    "timestamp": "2026-02-13T02:45:11.223Z",
+    "amount": 49000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "MERCH-TN-60099",
+      "upi_id": "shop.owner.chennai@okicici",
+      "device": { "device_id": "DEV-Z8003", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.88.33.200" },
+      "geo": { "lat": 13.0827, "lon": 80.2707 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-TN-60004", "upi_id": "personal.acct@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000040",
+    "timestamp": "2026-02-13T09:24:05.115Z",
+    "amount": 1800.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70008",
+      "upi_id": "tanvi.hedge@gpay",
+      "device": { "device_id": "DEV-AA1004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.55.210" },
+      "geo": { "lat": 15.3647, "lon": 75.1240 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-KA-7002", "upi_id": "decathlon.hub@axl", "receiver_type": "MERCHANT", "mcc_code": "5941" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000041",
+    "timestamp": "2026-02-13T09:24:20.440Z",
+    "amount": 350.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50004",
+      "upi_id": "priti.shah@paytm",
+      "device": { "device_id": "DEV-BB2004", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "59.90.140.33" },
+      "geo": { "lat": 21.1702, "lon": 72.8311 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-GJ-5002", "upi_id": "ola.surat@icici", "receiver_type": "MERCHANT", "mcc_code": "4121" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000042",
+    "timestamp": "2026-02-13T09:24:35.775Z",
+    "amount": 15500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TS-20002",
+      "upi_id": "srinivas.reddy@oksbi",
+      "device": { "device_id": "DEV-CC3004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.44.88.155" },
+      "geo": { "lat": 17.4399, "lon": 78.4983 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-TS-20003", "upi_id": "padma.devi@phonepe", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000043",
+    "timestamp": "2026-02-13T09:24:50.110Z",
+    "amount": 999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KL-10003",
+      "upi_id": "ajith.kumar@federalbank",
+      "device": { "device_id": "DEV-DD4004", "device_os": "iOS 16", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.35.200.45" },
+      "geo": { "lat": 8.5241, "lon": 76.9366 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-KL-1001", "upi_id": "lulu.mall.tvm@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5311" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000044",
+    "timestamp": "2026-02-13T09:25:05.332Z",
+    "amount": 50000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90003",
+      "upi_id": "suresh.mule01@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0330, "lon": 72.8410 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90011", "upi_id": "layering.acct@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000045",
+    "timestamp": "2026-02-13T09:25:20.668Z",
+    "amount": 275.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-RJ-30005",
+      "upi_id": "rekha.sharma@gpay",
+      "device": { "device_id": "DEV-EE5004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.92.66.110" },
+      "geo": { "lat": 26.9124, "lon": 75.7873 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-RJ-3001", "upi_id": "haldirams.jpr@okicici", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000046",
+    "timestamp": "2026-02-13T09:25:35.990Z",
+    "amount": 7200.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-UP-12002",
+      "upi_id": "aakash.mishra@phonepe",
+      "device": { "device_id": "DEV-FF6004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.38.22.180" },
+      "geo": { "lat": 27.1767, "lon": 78.0081 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-UP-12003", "upi_id": "reena.tripathi@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000047",
+    "timestamp": "2026-02-13T09:25:50.220Z",
+    "amount": 3500.00,
+    "currency": "INR",
+    "txn_type": "COLLECT",
+    "sender": {
+      "sender_id": "USR-HR-13002",
+      "upi_id": "simran.batra@okhdfc",
+      "device": { "device_id": "DEV-GG7004", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.91.200.88" },
+      "geo": { "lat": 30.7333, "lon": 76.7794 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-HR-13003", "upi_id": "kunal.arora@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000048",
+    "timestamp": "2026-02-13T09:26:05.445Z",
+    "amount": 65.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-WB-40003",
+      "upi_id": "partha.sarathi@gpay",
+      "device": { "device_id": "DEV-HH8004", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "2.9.5", "capability_mask": "011001" },
+      "network": { "ip_address": "49.33.140.66" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-WB-4003", "upi_id": "metro.ticket.kol@oksbi", "receiver_type": "MERCHANT", "mcc_code": "4111" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000049",
+    "timestamp": "2026-02-13T09:26:20.770Z",
+    "amount": 1200.00,
+    "currency": "INR",
+    "txn_type": "REFUND",
+    "sender": {
+      "sender_id": "MERCH-MH-9002",
+      "upi_id": "amazon.pay@axl",
+      "device": { "device_id": "DEV-MERCH-AZ01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "3.6.120.55" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90007", "upi_id": "aditi.kulkarni@gpay", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000050",
+    "timestamp": "2026-02-13T09:26:35.100Z",
+    "amount": 42000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DORMANT-003",
+      "upi_id": "frozen.wallet@ibl",
+      "device": { "device_id": "DEV-NEW-X03", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "8.8.1.200" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KA-70009", "upi_id": "extract.funds@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000051",
+    "timestamp": "2026-02-13T09:26:50.442Z",
+    "amount": 950.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60005",
+      "upi_id": "revathi.bala@okaxis",
+      "device": { "device_id": "DEV-II9004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.37.88.192" },
+      "geo": { "lat": 9.9252, "lon": 78.1198 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TN-6003", "upi_id": "apollo.pharmacy@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5912" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000052",
+    "timestamp": "2026-02-13T09:27:05.775Z",
+    "amount": 18000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80006",
+      "upi_id": "ravi.bhatnagar@kotak",
+      "device": { "device_id": "DEV-JJ1005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.91.44.201" },
+      "geo": { "lat": 28.5355, "lon": 77.3910 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-DL-80007", "upi_id": "landlord.delhi@oksbi", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000053",
+    "timestamp": "2026-02-13T09:27:20.110Z",
+    "amount": 160.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MP-11003",
+      "upi_id": "deepa.tiwari@phonepe",
+      "device": { "device_id": "DEV-KK2005", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.93.110.77" },
+      "geo": { "lat": 22.7196, "lon": 75.8577 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-MP-1101", "upi_id": "chai.sutta.bar@gpay", "receiver_type": "MERCHANT", "mcc_code": "5814" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000054",
+    "timestamp": "2026-02-13T09:27:35.445Z",
+    "amount": 5000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50005",
+      "upi_id": "chirag.mehta@okicici",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "59.90.55.120" },
+      "geo": { "lat": 22.3072, "lon": 73.1812 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-GJ-50006", "upi_id": "jinal.patel@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000055",
+    "timestamp": "2026-02-13T09:27:50.772Z",
+    "amount": 399.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70010",
+      "upi_id": "ashwin.kumar@gpay",
+      "device": { "device_id": "DEV-LL3005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.140.33" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-KA-7003", "upi_id": "starbucks.blr@axl", "receiver_type": "MERCHANT", "mcc_code": "5814" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000056",
+    "timestamp": "2026-02-13T09:28:05.100Z",
+    "amount": 5000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-IDENT-01",
+      "upi_id": "scatter.sender@paytm",
+      "device": { "device_id": "DEV-MM4005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.55.88" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-IDENT-TARGET", "upi_id": "collect.all@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000057",
+    "timestamp": "2026-02-13T09:28:08.330Z",
+    "amount": 5000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-IDENT-02",
+      "upi_id": "scatter.sender2@okicici",
+      "device": { "device_id": "DEV-NN5005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.55.89" },
+      "geo": { "lat": 19.0762, "lon": 72.8779 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-IDENT-TARGET", "upi_id": "collect.all@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000058",
+    "timestamp": "2026-02-13T09:28:11.660Z",
+    "amount": 5000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-IDENT-03",
+      "upi_id": "scatter.sender3@oksbi",
+      "device": { "device_id": "DEV-OO6005", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.36.55.90" },
+      "geo": { "lat": 19.0764, "lon": 72.8781 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-IDENT-TARGET", "upi_id": "collect.all@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000059",
+    "timestamp": "2026-02-13T09:28:14.990Z",
+    "amount": 5000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-IDENT-04",
+      "upi_id": "scatter.sender4@phonepe",
+      "device": { "device_id": "DEV-PP7005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.55.91" },
+      "geo": { "lat": 19.0766, "lon": 72.8783 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-IDENT-TARGET", "upi_id": "collect.all@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000060",
+    "timestamp": "2026-02-13T09:28:30.115Z",
+    "amount": 11500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90012",
+      "upi_id": "sanjay.naik@okhdfc",
+      "device": { "device_id": "DEV-QQ8005", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.94.88.134" },
+      "geo": { "lat": 15.4909, "lon": 73.8278 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90013", "upi_id": "geeta.kamat@ibl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000061",
+    "timestamp": "2026-02-13T09:28:45.445Z",
+    "amount": 2100.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-OR-14002",
+      "upi_id": "bijay.panda@gpay",
+      "device": { "device_id": "DEV-RR9005", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011101" },
+      "network": { "ip_address": "49.41.200.55" },
+      "geo": { "lat": 20.2961, "lon": 85.8245 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-OR-1402", "upi_id": "reliance.digital@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5732" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000062",
+    "timestamp": "2026-02-13T09:29:00.772Z",
+    "amount": 580.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-PB-15003",
+      "upi_id": "harleen.kaur@phonepe",
+      "device": { "device_id": "DEV-SS1006", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.89.110.200" },
+      "geo": { "lat": 31.6340, "lon": 74.8723 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "MERCH-PB-1501", "upi_id": "kfc.amritsar@axl", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000063",
+    "timestamp": "2026-02-13T09:29:15.100Z",
+    "amount": 9000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-AS-16002",
+      "upi_id": "rupa.hazarika@oksbi",
+      "device": { "device_id": "DEV-TT2006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.39.88.140" },
+      "geo": { "lat": 26.1445, "lon": 91.7362 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-AS-16003", "upi_id": "debojit.bora@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000064",
+    "timestamp": "2026-02-13T09:29:30.330Z",
+    "amount": 30000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-PASSTHRU-01",
+      "upi_id": "quick.relay@paytm",
+      "device": { "device_id": "DEV-UU3006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.200.88" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90014", "upi_id": "endpoint.user@gpay", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000065",
+    "timestamp": "2026-02-13T09:29:32.660Z",
+    "amount": 29800.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90014",
+      "upi_id": "endpoint.user@gpay",
+      "device": { "device_id": "DEV-VV4006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.200.89" },
+      "geo": { "lat": 19.0761, "lon": 72.8778 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-PASSTHRU-02", "upi_id": "final.cashout@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000066",
+    "timestamp": "2026-02-13T09:29:50.990Z",
+    "amount": 1350.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70011",
+      "upi_id": "sunil.gowda@okicici",
+      "device": { "device_id": "DEV-WW5006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.22.177" },
+      "geo": { "lat": 12.2958, "lon": 76.6394 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-KA-7004", "upi_id": "more.supermarket@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5411" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000067",
+    "timestamp": "2026-02-13T09:30:05.220Z",
+    "amount": 25000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TS-20004",
+      "upi_id": "venkat.krishna@phonepe",
+      "device": { "device_id": "DEV-XX6006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.44.33.210" },
+      "geo": { "lat": 17.3850, "lon": 78.4867 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "BILL-TS-2002", "upi_id": "hmwssb.water@ybl", "receiver_type": "BILLER", "mcc_code": "4900" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000068",
+    "timestamp": "2026-02-13T09:30:20.550Z",
+    "amount": 4500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KL-10004",
+      "upi_id": "sreelakshmi.r@federalbank",
+      "device": { "device_id": "DEV-YY7006", "device_os": "iOS 16", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.35.140.66" },
+      "geo": { "lat": 10.5276, "lon": 76.2144 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "USR-KL-10005", "upi_id": "vineeth.menon@okaxis", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000069",
+    "timestamp": "2026-02-13T09:30:35.882Z",
+    "amount": 88.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90015",
+      "upi_id": "tushar.pawar@gpay",
+      "device": { "device_id": "DEV-ZZ8006", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.94.140.22" },
+      "geo": { "lat": 19.9975, "lon": 73.7898 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-MH-9003", "upi_id": "cutting.chai@paytm", "receiver_type": "MERCHANT", "mcc_code": "5814" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000070",
+    "timestamp": "2026-02-13T09:30:50.112Z",
+    "amount": 35000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80008",
+      "upi_id": "vikas.jain@okhdfc",
+      "device": { "device_id": "DEV-AB1007", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.91.88.140" },
+      "geo": { "lat": 28.6139, "lon": 77.2090 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "USR-DL-80009", "upi_id": "meenakshi.jain@oksbi", "receiver_type": "SELF", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000071",
+    "timestamp": "2026-02-13T09:31:05.445Z",
+    "amount": 2800.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-UP-12004",
+      "upi_id": "ramesh.pandey@ibl",
+      "device": { "device_id": "DEV-AC2007", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.38.140.33" },
+      "geo": { "lat": 25.3176, "lon": 82.9739 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-UP-1202", "upi_id": "banaras.saree@paytm", "receiver_type": "MERCHANT", "mcc_code": "5699" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000072",
+    "timestamp": "2026-02-13T09:31:20.770Z",
+    "amount": 500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60006",
+      "upi_id": "manoj.kumar@okaxis",
+      "device": { "device_id": "DEV-AD3007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.37.200.99" },
+      "geo": { "lat": 10.7905, "lon": 78.7047 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TN-6004", "upi_id": "tneb.electricity@oksbi", "receiver_type": "BILLER", "mcc_code": "4900" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000073",
+    "timestamp": "2026-02-13T09:31:35.100Z",
+    "amount": 7777.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50007",
+      "upi_id": "dhruv.dave@gpay",
+      "device": { "device_id": "DEV-AE4007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.90.88.201" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-GJ-50008", "upi_id": "nisha.soni@kotak", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000074",
+    "timestamp": "2026-02-13T09:31:50.332Z",
+    "amount": 14000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90016",
+      "upi_id": "pramod.shirke@phonepe",
+      "device": { "device_id": "DEV-AF5007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.94.44.88" },
+      "geo": { "lat": 18.5204, "lon": 73.8567 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90017", "upi_id": "anil.bhosale@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000075",
+    "timestamp": "2026-02-13T09:32:05.665Z",
+    "amount": 230.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-WB-40004",
+      "upi_id": "anirban.ghosh@okicici",
+      "device": { "device_id": "DEV-AG6007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.33.200.140" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-WB-4004", "upi_id": "mishti.doi.shop@paytm", "receiver_type": "MERCHANT", "mcc_code": "5441" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000076",
+    "timestamp": "2026-02-13T09:32:20.990Z",
+    "amount": 99999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DORMANT-004",
+      "upi_id": "sleeping.giant@oksbi",
+      "device": { "device_id": "DEV-NEW-X04", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "8.8.5.120" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-WB-40005", "upi_id": "drain.funds@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000077",
+    "timestamp": "2026-02-13T09:32:35.220Z",
+    "amount": 1100.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-RJ-30006",
+      "upi_id": "pankaj.joshi@gpay",
+      "device": { "device_id": "DEV-AH7007", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "59.92.33.180" },
+      "geo": { "lat": 24.5854, "lon": 73.7125 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-RJ-3002", "upi_id": "lake.palace.hotel@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "7011" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000078",
+    "timestamp": "2026-02-13T09:32:50.550Z",
+    "amount": 6000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-HR-13004",
+      "upi_id": "monika.rani@paytm",
+      "device": { "device_id": "DEV-AI8007", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.91.140.55" },
+      "geo": { "lat": 28.4595, "lon": 77.0266 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "USR-HR-13005", "upi_id": "sanjay.sheoran@okhdfc", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000079",
+    "timestamp": "2026-02-13T09:33:05.880Z",
+    "amount": 425.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70012",
+      "upi_id": "rashmi.rao@okaxis",
+      "device": { "device_id": "DEV-AJ9007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.88.55" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-KA-7005", "upi_id": "nandini.milk@oksbi", "receiver_type": "MERCHANT", "mcc_code": "5451" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000080",
+    "timestamp": "2026-02-13T09:33:20.112Z",
+    "amount": 40000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0340, "lon": 72.8420 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-DL-80010", "upi_id": "exit.cash@phonepe", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000081",
+    "timestamp": "2026-02-13T09:33:35.445Z",
+    "amount": 2250.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60007",
+      "upi_id": "pradeep.selvan@ibl",
+      "device": { "device_id": "DEV-AK1008", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.42.44.133" },
+      "geo": { "lat": 12.9249, "lon": 79.1325 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TN-6005", "upi_id": "saravana.bhavan@okicici", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000082",
+    "timestamp": "2026-02-13T09:33:50.770Z",
+    "amount": 16500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80011",
+      "upi_id": "tarun.chauhan@kotak",
+      "device": { "device_id": "DEV-AL2008", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.91.55.201" },
+      "geo": { "lat": 28.7041, "lon": 77.1025 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-DL-80012", "upi_id": "preeti.chauhan@gpay", "receiver_type": "SELF", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000083",
+    "timestamp": "2026-02-13T09:34:05.100Z",
+    "amount": 310.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KL-10006",
+      "upi_id": "amal.joseph@federalbank",
+      "device": { "device_id": "DEV-AM3008", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "2.9.5", "capability_mask": "011001" },
+      "network": { "ip_address": "49.35.33.210" },
+      "geo": { "lat": 10.0159, "lon": 76.3419 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-KL-1002", "upi_id": "ksrtc.booking@oksbi", "receiver_type": "MERCHANT", "mcc_code": "4111" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000084",
+    "timestamp": "2026-02-13T09:34:20.332Z",
+    "amount": 55000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-SIM-SWAP-04",
+      "upi_id": "victim.user4@okhdfc",
+      "device": { "device_id": "DEV-SWAP-01", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.88.44" },
+      "geo": { "lat": 19.0764, "lon": 72.8781 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-MH-90008", "upi_id": "cash.out.now@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000085",
+    "timestamp": "2026-02-13T09:34:35.660Z",
+    "amount": 770.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MP-11004",
+      "upi_id": "shivani.dubey@phonepe",
+      "device": { "device_id": "DEV-AN4008", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.93.200.44" },
+      "geo": { "lat": 23.2599, "lon": 77.4126 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "MERCH-MP-1102", "upi_id": "medplus.bhopal@axl", "receiver_type": "MERCHANT", "mcc_code": "5912" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000086",
+    "timestamp": "2026-02-13T09:34:50.990Z",
+    "amount": 9500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90018",
+      "upi_id": "varun.deshpande@okicici",
+      "device": { "device_id": "DEV-AO5008", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.88.110.88" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90019", "upi_id": "neeta.patil@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000087",
+    "timestamp": "2026-02-13T09:35:05.220Z",
+    "amount": 145.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-OR-14003",
+      "upi_id": "priyanka.behera@gpay",
+      "device": { "device_id": "DEV-AP6008", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.0.0", "capability_mask": "011001" },
+      "network": { "ip_address": "49.41.55.180" },
+      "geo": { "lat": 20.2961, "lon": 85.8245 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-OR-1403", "upi_id": "jio.recharge@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "4812" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000088",
+    "timestamp": "2026-02-13T09:35:20.550Z",
+    "amount": 20000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-PB-15004",
+      "upi_id": "jaspreet.singh@oksbi",
+      "device": { "device_id": "DEV-AQ7008", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.89.200.33" },
+      "geo": { "lat": 30.7333, "lon": 76.7794 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-PB-15005", "upi_id": "baldev.singh@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000089",
+    "timestamp": "2026-02-13T09:35:35.880Z",
+    "amount": 3999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50009",
+      "upi_id": "foram.modi@gpay",
+      "device": { "device_id": "DEV-AR8008", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.90.22.177" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-GJ-5003", "upi_id": "lifestyle.ahmd@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5699" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000090",
+    "timestamp": "2026-02-13T09:35:50.112Z",
+    "amount": 500.00,
+    "currency": "INR",
+    "txn_type": "MANDATE",
+    "sender": {
+      "sender_id": "USR-KA-70013",
+      "upi_id": "shreya.gowda@phonepe",
+      "device": { "device_id": "DEV-AS9008", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.140.88" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "BILL-KA-7001", "upi_id": "spotify.india@axl", "receiver_type": "BILLER", "mcc_code": "4899" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000091",
+    "timestamp": "2026-02-13T09:36:05.445Z",
+    "amount": 60000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90003",
+      "upi_id": "suresh.mule01@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0330, "lon": 72.8410 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90004", "upi_id": "rakesh.mule02@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000092",
+    "timestamp": "2026-02-13T09:36:07.770Z",
+    "amount": 59500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-MH-90004",
+      "upi_id": "rakesh.mule02@ybl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 19.0352, "lon": 72.8432 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-GJ-50001", "upi_id": "ankit.mule03@axl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000093",
+    "timestamp": "2026-02-13T09:36:10.100Z",
+    "amount": 59000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-GJ-50001",
+      "upi_id": "ankit.mule03@axl",
+      "device": { "device_id": "DEV-SHARED01", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.7.45.201" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-MH-90003", "upi_id": "suresh.mule01@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000094",
+    "timestamp": "2026-02-13T09:36:25.332Z",
+    "amount": 1750.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TS-20005",
+      "upi_id": "lakshmi.devi@gpay",
+      "device": { "device_id": "DEV-AT1009", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.44.110.201" },
+      "geo": { "lat": 17.7215, "lon": 83.3025 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-TS-2001", "upi_id": "kalamandir.vzg@okicici", "receiver_type": "MERCHANT", "mcc_code": "5699" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000095",
+    "timestamp": "2026-02-13T09:36:40.660Z",
+    "amount": 380.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-DL-80013",
+      "upi_id": "kritika.sharma@paytm",
+      "device": { "device_id": "DEV-AU2009", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.91.22.140" },
+      "geo": { "lat": 28.6139, "lon": 77.2090 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "MERCH-DL-5003", "upi_id": "mcd.parking@oksbi", "receiver_type": "MERCHANT", "mcc_code": "7521" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000096",
+    "timestamp": "2026-02-13T09:36:55.990Z",
+    "amount": 8200.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-TN-60008",
+      "upi_id": "senthil.murugan@okhdfc",
+      "device": { "device_id": "DEV-AV3009", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.37.140.55" },
+      "geo": { "lat": 13.0827, "lon": 80.2707 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-TN-60009", "upi_id": "karthik.raja@ybl", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000097",
+    "timestamp": "2026-02-13T09:37:10.220Z",
+    "amount": 1500.00,
+    "currency": "INR",
+    "txn_type": "COLLECT",
+    "sender": {
+      "sender_id": "USR-MH-90020",
+      "upi_id": "manisha.wagh@phonepe",
+      "device": { "device_id": "DEV-AW4009", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "59.88.200.33" },
+      "geo": { "lat": 18.5204, "lon": 73.8567 }
+    },
+    "credential": { "type": "OTP", "sub_type": "SMS_OTP" },
+    "receiver": { "receiver_id": "USR-MH-90021", "upi_id": "sapna.more@gpay", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000098",
+    "timestamp": "2026-02-13T09:37:25.550Z",
+    "amount": 45.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-UP-12005",
+      "upi_id": "arjun.singh@ibl",
+      "device": { "device_id": "DEV-AX5009", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "2.9.5", "capability_mask": "011001" },
+      "network": { "ip_address": "49.38.33.120" },
+      "geo": { "lat": 26.8467, "lon": 80.9462 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-UP-1203", "upi_id": "parking.lko@paytm", "receiver_type": "MERCHANT", "mcc_code": "7521" }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000099",
+    "timestamp": "2026-02-13T09:37:40.880Z",
+    "amount": 28000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-KA-70014",
+      "upi_id": "chandrashekar.k@oksbi",
+      "device": { "device_id": "DEV-AY6009", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.43.200.110" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "USR-KA-70015", "upi_id": "savitha.nayak@okaxis", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "tx_id": "a1b2c3d4-1001-4e5f-9a00-000000000100",
+    "timestamp": "2026-02-13T09:37:55.112Z",
+    "amount": 670.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "USR-WB-40006",
+      "upi_id": "dipankar.roy@gpay",
+      "device": { "device_id": "DEV-AZ7009", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.33.55.201" },
+      "geo": { "lat": 22.5726, "lon": 88.3639 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "MERCH-WB-4005", "upi_id": "dunzo.kol@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5411" }
+  }
+]
