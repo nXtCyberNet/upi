@@ -62,7 +62,7 @@ export async function fetchSystemHealth(): Promise<SystemHealth> {
 // ═══ Graph Network ═══════════════════════════════════════════
 
 export async function fetchGraphNetwork(
-  minRisk = 45,
+  minRisk = 0,
   clusterIds?: number[]
 ): Promise<{ nodes: GraphNode[]; edges: GraphEdge[] }> {
   const params = new URLSearchParams({ min_risk: String(minRisk) });

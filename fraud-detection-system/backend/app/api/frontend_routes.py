@@ -249,12 +249,10 @@ async def system_health():
 
 _ENRICHED_NETWORK = """
 MATCH (u:User)
-WHERE u.risk_score > $min_risk OR u.community_id IN $cluster_ids
 WITH u
 ORDER BY u.risk_score DESC
 LIMIT 200
 OPTIONAL MATCH (u)-[r:TRANSFERRED_TO]->(v:User)
-  WHERE v.risk_score > $min_risk OR v.community_id IN $cluster_ids
 WITH u, v, r
 OPTIONAL MATCH (u)-[:USES_DEVICE]->(d:Device)
 WITH u, v, r, count(DISTINCT d) AS u_device_cnt
@@ -298,7 +296,7 @@ def _classify_node(risk: float, betweenness: float, fan_in: int, fan_out: int) -
 
 @frontend_router.get("/graph/network")
 async def graph_network(
-    min_risk: float = Query(45, ge=0, le=100),
+    min_risk: float = Query(0, ge=0, le=100),
     cluster_ids: Optional[str] = Query(None),
 ):
     if not _neo4j:
@@ -314,7 +312,7 @@ async def graph_network(
 
     try:
         rows = await asyncio.wait_for(
-            _neo4j.read_async(_ENRICHED_NETWORK, {"min_risk": min_risk, "cluster_ids": cids}),
+            _neo4j.read_async(_ENRICHED_NETWORK, {"cluster_ids": cids}),
             timeout=25.0,
         )
     except asyncio.TimeoutError:

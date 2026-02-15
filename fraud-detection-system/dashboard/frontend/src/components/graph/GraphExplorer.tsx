@@ -215,7 +215,7 @@ export function GraphExplorer({ onInspectNode, transactions }: GraphExplorerProp
     const fetchWithRetry = async (retries = 5, delayMs = 3000): Promise<{ nodes: GraphNode[]; edges: GraphEdge[] }> => {
       for (let attempt = 0; attempt < retries; attempt++) {
         try {
-          const data = await fetchGraphNetwork(45);
+          const data = await fetchGraphNetwork(0);
           if (data.nodes.length > 0) return data;
         } catch (err) {
           console.warn(`[GraphExplorer] Fetch attempt ${attempt + 1}/${retries} failed:`, err);
