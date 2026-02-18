@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { useRealStream } from "@/hooks/useRealStream";
+import { useMockStream } from "@/hooks/useMockStream";
 import { RiskGauge } from "@/components/gauges/RiskGauge";
 import { LatencyHeatmap } from "@/components/gauges/LatencyHeatmap";
 import { TransactionStream } from "@/components/stream/TransactionStream";
@@ -31,7 +31,7 @@ export default function Dashboard() {
   const {
     transactions, systemHealth, latencyBuckets, isPaused, togglePause,
     totalProcessed, totalBlocked, blockedVolume, globalRiskAvg, connected,
-  } = useRealStream();
+  } = useMockStream();
 
   const [activeTab, setActiveTab] = useState<Tab>("pulse");
   const [selectedTx, setSelectedTx] = useState<Transaction | null>(null);

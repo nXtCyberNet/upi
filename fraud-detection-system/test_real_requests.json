@@ -1,0 +1,172 @@
+[
+  {
+    "_comment": "Normal P2P — Rajesh in Mumbai sends rent to Priya in Delhi via Jio 4G",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0001",
+    "timestamp": "2026-02-17T10:22:14.337Z",
+    "amount": 12000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0001",
+      "upi_id": "rajesh.kumar@okaxis",
+      "device": { "device_id": "DEV0001", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.36.128.42" },
+      "geo": { "lat": 19.0760, "lon": 72.8777 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0002", "upi_id": "priya.sharma@okhdfcbank", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "Merchant payment — Amit in Ahmedabad pays grocery store via Airtel Broadband",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0002",
+    "timestamp": "2026-02-17T10:24:55.892Z",
+    "amount": 3847.50,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0003",
+      "upi_id": "amit.patel@oksbi",
+      "device": { "device_id": "DEV0003", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "122.161.68.113" },
+      "geo": { "lat": 23.0225, "lon": 72.5714 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "U0009", "upi_id": "dmart.ahmedabad@hdfcbank", "receiver_type": "MERCHANT", "mcc_code": "5411" }
+  },
+  {
+    "_comment": "Small P2P — Kavitha in Kochi splits dinner bill with Deepa via BSNL broadband",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0003",
+    "timestamp": "2026-02-17T10:28:03.104Z",
+    "amount": 485.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0008",
+      "upi_id": "kavitha.nair@oksbi",
+      "device": { "device_id": "DEV0008", "device_os": "iOS 17", "device_type": "IOS", "app_version": "3.2.1", "capability_mask": "111111" },
+      "network": { "ip_address": "59.89.176.22" },
+      "geo": { "lat": 9.9312, "lon": 76.2673 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0010", "upi_id": "deepa.menon@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "High-value transfer — Vikram in Jaipur sends to Arjun in Chandigarh via Vi mobile",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0004",
+    "timestamp": "2026-02-17T10:31:47.560Z",
+    "amount": 49500.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0005",
+      "upi_id": "vikram.singh@paytm",
+      "device": { "device_id": "DEV0005", "device_os": "iOS 16", "device_type": "IOS", "app_version": "3.1.0", "capability_mask": "111001" },
+      "network": { "ip_address": "103.57.84.39" },
+      "geo": { "lat": 26.9124, "lon": 75.7873 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0013", "upi_id": "arjun.m@oksbi", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "Suspicious — Mule Rahul X rapid-fires cash to another mule via AWS IP (foreign hosting)",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0005",
+    "timestamp": "2026-02-17T10:33:12.003Z",
+    "amount": 74999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0016",
+      "upi_id": "rahulx99@okaxis",
+      "device": { "device_id": "DEV0015", "device_os": "Android 12", "device_type": "ANDROID", "app_version": "2.8.0", "capability_mask": "010001" },
+      "network": { "ip_address": "3.6.82.140" },
+      "geo": { "lat": 19.0330, "lon": 72.8410 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0017", "upi_id": "sanjay.g77@paytm", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "Dormant reactivation — Ravi in Patna wakes up after 45 days, sends large amount via Airtel 4G",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0006",
+    "timestamp": "2026-02-17T10:35:28.718Z",
+    "amount": 62000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0020",
+      "upi_id": "ravi.shankar@oksbi",
+      "device": { "device_id": "DEV0013", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.44.32.97" },
+      "geo": { "lat": 25.6093, "lon": 85.1376 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0016", "upi_id": "rahulx99@okaxis", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "Collect request — Sneha in Hyderabad collects electricity bill via ACT Fibernet",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0007",
+    "timestamp": "2026-02-17T10:38:50.441Z",
+    "amount": 2340.00,
+    "currency": "INR",
+    "txn_type": "COLLECT",
+    "sender": {
+      "sender_id": "U0004",
+      "upi_id": "sneha.reddy@okicici",
+      "device": { "device_id": "DEV0004", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "011101" },
+      "network": { "ip_address": "49.205.72.18" },
+      "geo": { "lat": 17.3850, "lon": 78.4867 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0011", "upi_id": "tsspdcl.bill@ybl", "receiver_type": "BILLER", "mcc_code": "4900" }
+  },
+  {
+    "_comment": "Night owl — Mohammed in Bangalore pays late-night food delivery at 2:47 AM via Jio Fiber",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0008",
+    "timestamp": "2026-02-17T02:47:19.206Z",
+    "amount": 673.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0007",
+      "upi_id": "md.farooq@okhdfcbank",
+      "device": { "device_id": "DEV0007", "device_os": "Android 14", "device_type": "ANDROID", "app_version": "3.2.1", "capability_mask": "111001" },
+      "network": { "ip_address": "49.37.200.156" },
+      "geo": { "lat": 12.9716, "lon": 77.5946 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FINGERPRINT" },
+    "receiver": { "receiver_id": "U0014", "upi_id": "swiggy.blr@axisbank", "receiver_type": "MERCHANT", "mcc_code": "5812" }
+  },
+  {
+    "_comment": "Suspicious — Fake Vendor receives from 3 users in rapid burst, this is #1 via DigitalOcean VPS",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0009",
+    "timestamp": "2026-02-17T10:40:02.887Z",
+    "amount": 9999.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0012",
+      "upi_id": "meera.d@okhdfcbank",
+      "device": { "device_id": "DEV0011", "device_os": "Android 13", "device_type": "ANDROID", "app_version": "3.1.0", "capability_mask": "011001" },
+      "network": { "ip_address": "164.52.192.76" },
+      "geo": { "lat": 21.1458, "lon": 79.0882 }
+    },
+    "credential": { "type": "PIN", "sub_type": "MPIN" },
+    "receiver": { "receiver_id": "U0018", "upi_id": "vendor.pay@okaxis", "receiver_type": "PERSON", "mcc_code": null }
+  },
+  {
+    "_comment": "Normal self-transfer — Lakshmi moves money between her own accounts via Vodafone mobile",
+    "tx_id": "f7e2a301-c8b4-4a19-b012-aef1d72c0010",
+    "timestamp": "2026-02-17T10:42:37.553Z",
+    "amount": 25000.00,
+    "currency": "INR",
+    "txn_type": "PAY",
+    "sender": {
+      "sender_id": "U0014",
+      "upi_id": "lakshmi.s@okicici",
+      "device": { "device_id": "DEV0012", "device_os": "iOS 16", "device_type": "IOS", "app_version": "3.0.0", "capability_mask": "111001" },
+      "network": { "ip_address": "106.210.35.89" },
+      "geo": { "lat": 9.9252, "lon": 78.1198 }
+    },
+    "credential": { "type": "BIOMETRIC", "sub_type": "FACE" },
+    "receiver": { "receiver_id": "U0014", "upi_id": "lakshmi.sundaram@oksbi", "receiver_type": "SELF", "mcc_code": null }
+  }
+]
