@@ -16,7 +16,7 @@ import { type Transaction, type GraphNode } from "@/lib/types";
 import { fetchSubgraph, fetchNodeTransactions } from "@/lib/api";
 import {
   Activity, Network, Brain, Shield, Play, Pause,
-  Radio, Zap,
+  Radio, Zap, Sparkles, ExternalLink,
 } from "lucide-react";
 import { TransactionContextMenu, useContextMenu } from "@/components/ui/TransactionContextMenu";
 import { FullAnalysisView } from "@/components/analysis/FullAnalysisView";
@@ -154,11 +154,10 @@ export default function Dashboard() {
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium transition-all duration-200 ${
-              activeTab === tab.key
+            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-medium transition-all duration-200 ${activeTab === tab.key
                 ? "bg-[#1e293b] text-[#f1f5f9] border border-slate-700 border-t-sky-500/30 shadow-[0_0_10px_rgba(56,189,248,0.08)]"
                 : "text-[#64748b] hover:text-[#94a3b8] hover:bg-[#0f172a] border border-transparent"
-            }`}
+              }`}
           >
             {tab.icon}
             {tab.label}
@@ -176,6 +175,7 @@ export default function Dashboard() {
             selectedTx={selectedTx}
             onSelectTx={setSelectedTx}
             onContextMenu={showContextMenu}
+            onFullAnalysis={setFullAnalysisTx}
             totalProcessed={totalProcessed}
             totalBlocked={totalBlocked}
             blockedVolume={blockedVolume}
@@ -203,9 +203,16 @@ export default function Dashboard() {
             </div>
             <div className="flex flex-col overflow-y-auto">
               <IntelligencePanel transaction={selectedTx} />
-              {/* Quant Drawer trigger */}
+              {/* Action Buttons */}
               {selectedTx && (
-                <div className="px-4 py-3 border-t border-slate-800">
+                <div className="px-4 py-3 border-t border-slate-800 flex flex-col gap-2">
+                  <button
+                    onClick={() => setFullAnalysisTx(selectedTx)}
+                    className="w-full py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 bg-gradient-to-r from-[#ef4444]/10 to-[#f59e0b]/10 border border-red-500/30 text-red-300 hover:border-red-500/50 hover:shadow-[0_0_15px_rgba(239,68,68,0.15)] transition-all"
+                  >
+                    <ExternalLink size={14} />
+                    Open Deep Analysis View
+                  </button>
                   <button
                     onClick={() => setQuantTx(selectedTx)}
                     className="w-full py-2.5 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 bg-gradient-to-r from-[#a78bfa]/10 to-[#38bdf8]/10 border border-violet-500/30 text-violet-300 hover:border-violet-500/50 hover:shadow-[0_0_15px_rgba(167,139,250,0.15)] transition-all"
@@ -273,6 +280,7 @@ interface PulseViewProps {
   selectedTx: Transaction | null;
   onSelectTx: (tx: Transaction) => void;
   onContextMenu: (e: React.MouseEvent, tx: Transaction) => void;
+  onFullAnalysis: (tx: Transaction) => void;
   totalProcessed: number;
   totalBlocked: number;
   blockedVolume: number;
@@ -280,7 +288,7 @@ interface PulseViewProps {
 }
 
 function PulseView({
-  transactions, systemHealth, latencyBuckets, selectedTx, onSelectTx, onContextMenu,
+  transactions, systemHealth, latencyBuckets, selectedTx, onSelectTx, onContextMenu, onFullAnalysis,
   totalProcessed, totalBlocked, blockedVolume, globalRiskAvg,
 }: PulseViewProps) {
   return (
@@ -335,6 +343,17 @@ function PulseView({
         <div className="flex-1">
           <IntelligencePanel transaction={selectedTx} />
         </div>
+        {selectedTx && (
+          <div className="px-4 py-3 border-t border-slate-800 shrink-0">
+            <button
+              onClick={() => onFullAnalysis(selectedTx)}
+              className="w-full py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-2 bg-gradient-to-r from-[#a78bfa]/8 to-[#38bdf8]/8 border border-violet-500/25 text-violet-300 hover:border-violet-500/45 hover:shadow-[0_0_12px_rgba(167,139,250,0.12)] transition-all"
+            >
+              <Sparkles size={12} />
+              Deep Analysis
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

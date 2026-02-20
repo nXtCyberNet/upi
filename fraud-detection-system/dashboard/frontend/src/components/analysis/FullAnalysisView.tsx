@@ -128,16 +128,16 @@ function generateFallbackAISummary(tx: Transaction, subgraph: RealtimeSubgraph |
   const summary = critCount >= 2
     ? `This transaction raises ${critCount} critical and ${warnCount} warning flags. The combination of ${issues.slice(0, 2).map((i) => i.title.toLowerCase()).join(" and ")} creates a high-confidence fraud signal. Immediate investigation is recommended.`
     : critCount === 1
-    ? `One critical issue was found: ${issues.find((i) => i.severity === "critical")?.title.toLowerCase()}. Combined with ${warnCount} additional warnings, this transaction should be reviewed by a fraud analyst.`
-    : `This transaction shows ${warnCount} warning indicators. While none individually are conclusive, the combined pattern warrants monitoring.`;
+      ? `One critical issue was found: ${issues.find((i) => i.severity === "critical")?.title.toLowerCase()}. Combined with ${warnCount} additional warnings, this transaction should be reviewed by a fraud analyst.`
+      : `This transaction shows ${warnCount} warning indicators. While none individually are conclusive, the combined pattern warrants monitoring.`;
 
   const recommendation = critCount >= 2
     ? "BLOCK this transaction immediately and freeze both accounts pending investigation. Alert the compliance team and file a suspicious activity report."
     : critCount === 1
-    ? "HOLD this transaction for manual review. Contact the sender to verify the transaction details before processing."
-    : warnCount >= 2
-    ? "Allow the transaction but add both accounts to the enhanced monitoring list for the next 30 days."
-    : "No immediate action required. Continue standard monitoring.";
+      ? "HOLD this transaction for manual review. Contact the sender to verify the transaction details before processing."
+      : warnCount >= 2
+        ? "Allow the transaction but add both accounts to the enhanced monitoring list for the next 30 days."
+        : "No immediate action required. Continue standard monitoring.";
 
   return { summary, riskVerdict, issues, possibilities, recommendation };
 }
@@ -153,7 +153,7 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
   const [subgraph, setSubgraph] = useState<RealtimeSubgraph | null>(null);
   useEffect(() => {
     let cancelled = false;
-    fetchSubgraph(subgraphUserId).then((sg) => { if (!cancelled) setSubgraph(sg); }).catch(() => {});
+    fetchSubgraph(subgraphUserId).then((sg) => { if (!cancelled) setSubgraph(sg); }).catch(() => { });
     return () => { cancelled = true; };
   }, [subgraphUserId]);
 
@@ -209,6 +209,19 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
     window.addEventListener("keydown", closeKey);
     return () => { window.removeEventListener("click", close); window.removeEventListener("keydown", closeKey); };
   }, [nodeContextMenu]);
+
+  // ── Auto-trigger AI analysis once subgraph is ready ──────────
+  const autoTriggeredRef = useRef(false);
+  useEffect(() => {
+    if (autoTriggeredRef.current) return;
+    // Trigger after a short delay so the UI paints first
+    const timer = setTimeout(() => {
+      autoTriggeredRef.current = true;
+      requestAIAnalysis();
+    }, 900);
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // ── AI Analysis request ──
   const requestAIAnalysis = useCallback(async () => {
@@ -404,11 +417,10 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
           <span className={`text-xs font-bold px-3 py-1.5 rounded-lg ${getRiskBadgeClass(tx.riskScore)}`}>
             {riskLabel} — {tx.riskScore}
           </span>
-          <span className={`text-[10px] font-bold px-2 py-1 rounded ${
-            tx.status === "BLOCKED" ? "bg-red-500/15 text-red-400 border border-red-500/30"
-            : tx.status === "SUCCESS" ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
-            : "bg-amber-500/15 text-amber-400 border border-amber-500/30"
-          }`}>{tx.status}</span>
+          <span className={`text-[10px] font-bold px-2 py-1 rounded ${tx.status === "BLOCKED" ? "bg-red-500/15 text-red-400 border border-red-500/30"
+              : tx.status === "SUCCESS" ? "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
+                : "bg-amber-500/15 text-amber-400 border border-amber-500/30"
+            }`}>{tx.status}</span>
           <button onClick={onClose} className="p-1.5 rounded-lg hover:bg-[#1e293b] text-[#64748b] hover:text-[#f1f5f9] transition-colors">
             <X size={18} />
           </button>
@@ -418,6 +430,70 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
       <div className="max-w-[1600px] mx-auto px-6 py-6 space-y-6">
         {/* ── Semantic Alert ── */}
         {tx.semanticAlert && <SemanticAlert alert={tx.semanticAlert} />}
+
+        {/* ═══ INTELLIGENCE OVERVIEW STRIP ═══ */}
+        <div className="grid grid-cols-6 gap-3">
+          {[
+            {
+              label: "Risk Score",
+              value: tx.riskScore.toString(),
+              sub: getRiskLabel(tx.riskScore),
+              color: riskColor,
+              icon: <Shield size={13} />,
+              glow: tx.riskScore >= 80,
+            },
+            {
+              label: "Amount",
+              value: formatINR(tx.amount),
+              sub: tx.city,
+              color: "#f59e0b",
+              icon: <Zap size={13} />,
+            },
+            {
+              label: "Network Reach",
+              value: `${(subgraph?.reachabilityScore ?? 0).toFixed(2)}×`,
+              sub: (subgraph?.reachabilityScore ?? 0) > 3 ? "⚠ Elevated" : "Normal",
+              color: (subgraph?.reachabilityScore ?? 0) > 3 ? "#ef4444" : "#38bdf8",
+              icon: <Network size={13} />,
+            },
+            {
+              label: "Cycle / Wash",
+              value: subgraph?.cycleDetected ? "DETECTED" : "CLEAN",
+              sub: subgraph?.cycleDetected ? `${subgraph?.cycleNodes?.length ?? 0} nodes` : "No circular flow",
+              color: subgraph?.cycleDetected ? "#ef4444" : "#10b981",
+              icon: <RefreshCcw size={13} />,
+            },
+            {
+              label: "Geo Speed",
+              value: `${Math.round(velocity)} km/h`,
+              sub: riskProb.tier,
+              color: riskProb.color,
+              icon: <Globe size={13} />,
+            },
+            {
+              label: "Triggered Rules",
+              value: tx.triggeredRules.length.toString(),
+              sub: tx.triggeredRules.filter((r) => r.severity === "CRITICAL").length > 0
+                ? `${tx.triggeredRules.filter((r) => r.severity === "CRITICAL").length} CRITICAL`
+                : "No critical",
+              color: tx.triggeredRules.some((r) => r.severity === "CRITICAL") ? "#ef4444" : "#f59e0b",
+              icon: <AlertTriangle size={13} />,
+            },
+          ].map((s, i) => (
+            <div
+              key={i}
+              className={`bg-[#0f172a] rounded-xl border p-3 flex flex-col gap-1.5 ${s.glow ? "border-red-500/30 shadow-[0_0_15px_rgba(239,68,68,0.12)]" : "border-slate-800"
+                }`}
+            >
+              <div className="flex items-center gap-1.5" style={{ color: s.color }}>
+                {s.icon}
+                <span className="text-[9px] font-semibold uppercase tracking-wider text-[#64748b]">{s.label}</span>
+              </div>
+              <div className="text-lg font-bold font-mono leading-none" style={{ color: s.color }}>{s.value}</div>
+              <div className="text-[9px] text-[#475569]">{s.sub}</div>
+            </div>
+          ))}
+        </div>
 
         {/* ═══ ROW 1: Transaction Summary + Quick Stats ═══ */}
         <div className="grid grid-cols-4 gap-4">
@@ -544,11 +620,10 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
                     <span className="text-xs font-semibold text-[#f1f5f9]">
                       Transactions of <span className={selectedNode.type === "aggregator" ? "text-red-400" : selectedNode.type === "mule" ? "text-amber-400" : "text-sky-400"}>{selectedNode.name}</span>
                     </span>
-                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${
-                      selectedNode.type === "aggregator" ? "bg-red-500/15 text-red-400 border border-red-500/30"
-                      : selectedNode.type === "mule" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30"
-                      : "bg-sky-500/15 text-sky-400 border border-sky-500/30"
-                    }`}>{selectedNode.type.toUpperCase()} L{selectedNode.level}</span>
+                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${selectedNode.type === "aggregator" ? "bg-red-500/15 text-red-400 border border-red-500/30"
+                        : selectedNode.type === "mule" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30"
+                          : "bg-sky-500/15 text-sky-400 border border-sky-500/30"
+                      }`}>{selectedNode.type.toUpperCase()} L{selectedNode.level}</span>
                   </div>
                   <button onClick={() => setShowNodeDrawer(false)} className="text-[#64748b] hover:text-[#f1f5f9]"><X size={14} /></button>
                 </div>
@@ -594,6 +669,109 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
           </div>
         </div>
 
+        {/* ═══ LAYERING CHAIN ANALYSIS ═══ */}
+        {subgraph && subgraph.nodes.length > 0 && (
+          <div className="bg-[#0f172a] rounded-xl border border-slate-800 p-5">
+            <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center gap-2">
+                <GitBranch size={14} className="text-violet-400" />
+                <span className="text-xs font-semibold text-[#f1f5f9] uppercase tracking-wider">
+                  Layering Chain Analysis
+                </span>
+                <span className="text-[9px] font-mono px-1.5 py-0.5 rounded bg-violet-500/10 text-violet-300 border border-violet-500/20">
+                  3-hop network
+                </span>
+              </div>
+              <div className="flex items-center gap-4 text-[10px] font-mono text-[#64748b]">
+                <span>{subgraph.nodes.length} nodes · {subgraph.edges.length} edges</span>
+                {subgraph.cycleDetected && (
+                  <span className="flex items-center gap-1 text-red-400 font-semibold">
+                    <RefreshCcw size={10} /> CYCLE
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Chain visual: L0 → L1 → L2 → L3 */}
+            <div className="relative flex items-start gap-0 overflow-x-auto pb-2">
+              {([0, 1, 2, 3] as const).map((level) => {
+                const levelNodes = subgraph.nodes.filter((n) => n.level === level);
+                const layerLabel = level === 0 ? "Origin" : level === 1 ? "Layer 1" : level === 2 ? "Layer 2" : "Layer 3";
+                const layerColor = level === 0 ? "#38bdf8" : level === 1 ? "#a78bfa" : level === 2 ? "#f59e0b" : "#ef4444";
+                return (
+                  <div key={level} className="flex items-start gap-0 shrink-0">
+                    <div className="flex flex-col items-center min-w-[160px]">
+                      <div className="text-[9px] font-semibold uppercase tracking-wider mb-2 px-2 py-0.5 rounded"
+                        style={{ color: layerColor, backgroundColor: layerColor + "18", border: `1px solid ${layerColor}30` }}>
+                        {layerLabel}
+                      </div>
+                      <div className="space-y-1.5 w-full">
+                        {levelNodes.length === 0 ? (
+                          <div className="text-[9px] text-[#475569] text-center py-2 italic">no nodes</div>
+                        ) : levelNodes.map((n) => (
+                          <div key={n.id}
+                            className="mx-1 rounded-lg border p-2 cursor-pointer hover:border-slate-600 transition-colors"
+                            style={{
+                              backgroundColor: "#020617",
+                              borderColor: selectedNode?.id === n.id ? layerColor + "80" : "#1e293b",
+                              boxShadow: selectedNode?.id === n.id ? `0 0 8px ${layerColor}30` : "none",
+                            }}
+                            onClick={() => handleNodeClick(n)}
+                          >
+                            <div className="flex items-center gap-1.5 mb-1">
+                              <span className="w-2 h-2 rounded-full shrink-0" style={{
+                                backgroundColor: n.type === "aggregator" ? "#ef4444" : n.type === "mule" ? "#f59e0b" : layerColor,
+                              }} />
+                              <span className="text-[10px] font-semibold text-[#f1f5f9] truncate">{n.name}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-[8px] font-mono text-[#64748b] truncate">{(n.upi || "").split("@")[0]}</span>
+                              <span className="text-[9px] font-bold font-mono ml-1 shrink-0" style={{
+                                color: n.riskScore >= 70 ? "#ef4444" : n.riskScore >= 50 ? "#f59e0b" : "#10b981"
+                              }}>{n.riskScore.toFixed(0)}</span>
+                            </div>
+                            {n.type !== "user" && (
+                              <div className="mt-1">
+                                <span className={`text-[8px] font-bold px-1 py-0.5 rounded ${n.type === "aggregator" ? "bg-red-500/15 text-red-400" : "bg-amber-500/15 text-amber-400"
+                                  }`}>{n.type.toUpperCase()}</span>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    {level < 3 && (
+                      <div className="flex items-center self-center mx-1 mt-4">
+                        <div className="h-px w-6 bg-gradient-to-r from-[#38bdf840] to-[#a78bfa40]" />
+                        <ChevronRight size={12} className="text-[#475569]" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Velocity summary bar */}
+            <div className="mt-3 grid grid-cols-4 gap-2">
+              {[
+                { label: "Hop Velocity", value: `₹${(subgraph.hopAdjustedVelocity || 0).toLocaleString()}/min`, color: "#22d3ee" },
+                {
+                  label: "L1→L3 Speed",
+                  value: `${(subgraph.networkPathVelocityMin ?? 30).toFixed(0)} min`,
+                  color: (subgraph.networkPathVelocityMin ?? 30) < 15 ? "#ef4444" : "#10b981",
+                },
+                { label: "Geo-IP Conv.", value: `${((subgraph.geoIpConvergence ?? 0) * 100).toFixed(0)}%`, color: "#34d399" },
+                { label: "Identity Density", value: `${(subgraph.identityDensity ?? 1).toFixed(1)} u/d`, color: "#f472b6" },
+              ].map((m) => (
+                <div key={m.label} className="bg-[#020617] rounded-lg border border-[#1e293b] p-2 text-center">
+                  <div className="text-[8px] text-[#64748b] uppercase">{m.label}</div>
+                  <div className="text-sm font-bold font-mono mt-0.5" style={{ color: m.color }}>{m.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* ═══ ROW 3: Behavioral Radar + Triggered Rules ═══ */}
         <div className="grid grid-cols-2 gap-4">
           {/* 8-axis Radar */}
@@ -603,10 +781,9 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
                 <Cpu size={14} className="text-violet-400" />
                 <span className="text-xs font-semibold text-[#f1f5f9] uppercase tracking-wider">Behavioral Fingerprint</span>
               </div>
-              <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${
-                isHighRisk ? "bg-red-500/15 text-red-400 border border-red-500/30"
-                : "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
-              }`}>{isHighRisk ? "MULE PROFILE" : "NORMAL"}</span>
+              <span className={`text-[10px] font-bold px-2 py-0.5 rounded ${isHighRisk ? "bg-red-500/15 text-red-400 border border-red-500/30"
+                  : "bg-emerald-500/15 text-emerald-400 border border-emerald-500/30"
+                }`}>{isHighRisk ? "MULE PROFILE" : "NORMAL"}</span>
             </div>
             <ResponsiveContainer width="100%" height={280}>
               <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="68%">
@@ -653,16 +830,15 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
                     <div key={i} className="flex items-start gap-2 p-2.5 rounded-lg bg-[#020617] border border-[#1e293b]">
                       <div className="mt-0.5">
                         {rule.severity === "CRITICAL" ? <AlertTriangle size={14} className="text-red-400" />
-                         : rule.severity === "WARNING" ? <AlertTriangle size={14} className="text-amber-400" />
-                         : <Activity size={14} className="text-blue-400" />}
+                          : rule.severity === "WARNING" ? <AlertTriangle size={14} className="text-amber-400" />
+                            : <Activity size={14} className="text-blue-400" />}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="flex items-center gap-2">
-                          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                            rule.severity === "CRITICAL" ? "bg-red-500/15 text-red-400"
-                            : rule.severity === "WARNING" ? "bg-amber-500/15 text-amber-400"
-                            : "bg-blue-500/15 text-blue-400"
-                          }`}>{rule.severity}</span>
+                          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${rule.severity === "CRITICAL" ? "bg-red-500/15 text-red-400"
+                              : rule.severity === "WARNING" ? "bg-amber-500/15 text-amber-400"
+                                : "bg-blue-500/15 text-blue-400"
+                            }`}>{rule.severity}</span>
                           <span className="text-xs font-semibold text-[#f1f5f9]">{rule.rule}</span>
                         </div>
                         <p className="text-xs text-[#94a3b8] mt-1">{rule.detail}</p>
@@ -738,9 +914,8 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
                 { label: "15–30 min", color: "#f59e0b", scenario: "Fast chain", active: netPathMin >= 15 && netPathMin <= 30 },
                 { label: "< 15 min", color: "#ef4444", scenario: "Relay mule", active: netPathMin < 15 },
               ].map((t) => (
-                <div key={t.label} className={`flex items-center justify-between px-2.5 py-2 rounded-lg border text-[10px] font-mono ${
-                  t.active ? "border-sky-500/30 bg-[#020617]" : "border-[#1e293b] bg-[#0f172a] opacity-40"
-                }`}>
+                <div key={t.label} className={`flex items-center justify-between px-2.5 py-2 rounded-lg border text-[10px] font-mono ${t.active ? "border-sky-500/30 bg-[#020617]" : "border-[#1e293b] bg-[#0f172a] opacity-40"
+                  }`}>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: t.color }} />
                     <span className="text-[#94a3b8]">{t.label}</span>
@@ -846,23 +1021,21 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
               )}
 
               {/* Verdict Banner */}
-              <div className={`rounded-xl p-4 border ${
-                aiAnalysis.riskVerdict.startsWith("HIGH") ? "bg-red-500/10 border-red-500/20" :
-                aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "bg-amber-500/10 border-amber-500/20" :
-                aiAnalysis.riskVerdict.startsWith("MODERATE") ? "bg-yellow-500/10 border-yellow-500/20" :
-                "bg-emerald-500/10 border-emerald-500/20"
-              }`}>
+              <div className={`rounded-xl p-4 border ${aiAnalysis.riskVerdict.startsWith("HIGH") ? "bg-red-500/10 border-red-500/20" :
+                  aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "bg-amber-500/10 border-amber-500/20" :
+                    aiAnalysis.riskVerdict.startsWith("MODERATE") ? "bg-yellow-500/10 border-yellow-500/20" :
+                      "bg-emerald-500/10 border-emerald-500/20"
+                }`}>
                 <div className="flex items-center gap-2 mb-2">
                   <Shield size={16} className={
                     aiAnalysis.riskVerdict.startsWith("HIGH") ? "text-red-400" :
-                    aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "text-amber-400" :
-                    "text-emerald-400"
+                      aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "text-amber-400" :
+                        "text-emerald-400"
                   } />
-                  <span className={`text-sm font-bold ${
-                    aiAnalysis.riskVerdict.startsWith("HIGH") ? "text-red-400" :
-                    aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "text-amber-400" :
-                    "text-emerald-400"
-                  }`}>{aiAnalysis.riskVerdict}</span>
+                  <span className={`text-sm font-bold ${aiAnalysis.riskVerdict.startsWith("HIGH") ? "text-red-400" :
+                      aiAnalysis.riskVerdict.startsWith("ELEVATED") ? "text-amber-400" :
+                        "text-emerald-400"
+                    }`}>{aiAnalysis.riskVerdict}</span>
                 </div>
                 <p className="text-xs text-[#e2e8f0] leading-relaxed">{aiAnalysis.summary}</p>
               </div>
@@ -876,17 +1049,15 @@ export function FullAnalysisView({ transaction: tx, onClose }: FullAnalysisViewP
                   </h4>
                   <div className="space-y-2">
                     {aiAnalysis.issues.map((issue, i) => (
-                      <div key={i} className={`rounded-lg p-3 border ${
-                        issue.severity === "critical" ? "bg-red-500/5 border-red-500/20" :
-                        issue.severity === "warning" ? "bg-amber-500/5 border-amber-500/20" :
-                        "bg-blue-500/5 border-blue-500/20"
-                      }`}>
+                      <div key={i} className={`rounded-lg p-3 border ${issue.severity === "critical" ? "bg-red-500/5 border-red-500/20" :
+                          issue.severity === "warning" ? "bg-amber-500/5 border-amber-500/20" :
+                            "bg-blue-500/5 border-blue-500/20"
+                        }`}>
                         <div className="flex items-center gap-2 mb-1">
-                          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${
-                            issue.severity === "critical" ? "bg-red-500/15 text-red-400 border border-red-500/30" :
-                            issue.severity === "warning" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30" :
-                            "bg-blue-500/15 text-blue-400 border border-blue-500/30"
-                          }`}>{issue.severity}</span>
+                          <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase ${issue.severity === "critical" ? "bg-red-500/15 text-red-400 border border-red-500/30" :
+                              issue.severity === "warning" ? "bg-amber-500/15 text-amber-400 border border-amber-500/30" :
+                                "bg-blue-500/15 text-blue-400 border border-blue-500/30"
+                            }`}>{issue.severity}</span>
                           <span className="text-xs font-semibold text-[#f1f5f9]">{issue.title}</span>
                         </div>
                         <p className="text-[11px] text-[#94a3b8] leading-relaxed">{issue.explanation}</p>
